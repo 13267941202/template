@@ -1,0 +1,17 @@
+{# 继承父模板 #}
+{% extends "base.html" %}
+
+# 重写部分
+{% block title %}
+    电影
+{% endblock %}
+
+{% block header %}
+    <h1>电影</h1>
+{% endblock %}
+
+{% block content %}
+    {% for item in items %}
+        {{ itemGroup(item.thumbnail, item.title, item.rating) }}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+    首页
+{% endblock %}
+{% block header %}
+    <h1>豆瓣评分</h1>
+{% endblock %}
+{% block content %}
+    {{ listGroup("电影", movies, 1) }}
+            <hr>
+            <hr>
+    {{ listGroup("电视剧", tvs, 2) }}
+{% endblock %}
